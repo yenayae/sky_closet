@@ -78,7 +78,7 @@ const Home = () => {
           <div className="right-card">
             <img
               className="card2-image"
-              src="/img/assets/home/pin.webp"
+              src="/img/assets/home/pin.png"
               alt=""
             />
           </div>

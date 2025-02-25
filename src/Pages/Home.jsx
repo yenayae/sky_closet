@@ -23,7 +23,7 @@ const Home = () => {
         <div
           className="home-banner"
           style={{
-            backgroundImage: `url("/img/assets/home/night_sky.jpeg")`,
+            backgroundImage: `url("/img/assets/home/night_sky.png")`,
           }}
         >
           <div className="banner-content">

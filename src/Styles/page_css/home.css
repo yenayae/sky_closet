@@ -13,8 +13,8 @@
 .home-banner {
   width: 100%;
   height: 95vh;
-  /* background-image: url("/img/assets/home/night_sky.jpeg"); */
-  /* background-image: url("../../assets/home/night_sky.jpeg"); */
+  /* background-image: url("/img/assets/home/night_sky.png"); */
+  /* background-image: url("../../assets/home/night_sky.png"); */
   background-size: cover;
 
   display: flex;

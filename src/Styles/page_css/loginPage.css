@@ -1,0 +1,131 @@
+.login-container {
+  /* background-image: url("../../../public/img/assets/isle.jpeg"); */
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(8, 10, 10, 0.6)), */
+  /* url("../../../public/img/assets/isle.jpeg"); */
+  /* background-size: cover; */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f0f0f0;
+}
+
+.login-box {
+  background-color: rgb(255, 255, 255);
+
+  border-radius: 5px;
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 480px;
+  height: auto;
+
+  margin: 20px 0;
+  padding: 35px 20px;
+}
+
+.login-section {
+  /* background-color: violet; */
+  /* width: 480px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login-header {
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.login-title {
+  margin: 0;
+}
+
+.login-input {
+  width: 375px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+}
+
+.login-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input-label {
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.input-prompt {
+  margin-top: 5px;
+  font-size: 0.8em;
+  color: #777777;
+}
+
+.login-button {
+  width: 405px;
+  border: none;
+  border-radius: 5px;
+  height: 45px;
+  background-color: #dbdbdb;
+
+  cursor: pointer;
+}
+
+.login-right-display {
+  /* background-color: red; */
+  height: 100%;
+  width: 320px;
+  /* margin-left: 20px; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  position: relative;
+  left: 30px;
+  justify-content: center;
+}
+
+.tutorial-image {
+  width: 320px;
+  height: auto;
+}
+
+.password-error {
+  color: white;
+
+  border-radius: 3px;
+  padding: 15px;
+
+  margin-top: 10px;
+
+  transition: 0.1s ease;
+}
+
+.password-error.error {
+  background-color: rgb(202, 66, 66);
+}
+
+.password-error.success {
+  background-color: rgb(103, 192, 103);
+}
+
+.password-requirements {
+  list-style: none;
+  margin: 10px 0;
+  padding-left: 0;
+}
+
+.password-requirements {
+  margin-left: 10px;
+}

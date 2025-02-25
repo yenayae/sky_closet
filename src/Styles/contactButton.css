@@ -1,0 +1,27 @@
+.contact-button {
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 10px;
+  color: grey;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.contact-button:hover {
+  background-color: #e98080;
+  border-color: #e98080;
+  color: white;
+}
+
+.sky-link:link {
+  color: #6e95a8;
+}
+
+.sky-link:active {
+}
+
+.sky-link:visited {
+  color: #e98080;
+}

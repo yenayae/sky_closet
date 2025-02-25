@@ -1,0 +1,161 @@
+.cts-container {
+  background-color: #f7f7f7;
+  width: 480px;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  max-height: 100vh; /* Adjust as needed */
+  overflow-y: auto;
+  padding-right: 0px;
+
+  /* position: absolute;
+  top: 0;
+  right: -450px; */
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.cts-header {
+  /* background-color: pink; */
+  padding-top: 50px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cts-header-name {
+  font-size: 1.4em;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.cts-close {
+  /* font-size: 1.5em; */
+  height: 22px;
+  width: 22px;
+  padding: 5px;
+  border-radius: 50%;
+
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.cts-close:hover {
+  background-color: #dadada;
+}
+
+.cts-search-wrapper {
+  /* background-color: blue; */
+  /* width: 90%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cts-search-bar {
+  /* background-color: #dadada; */
+  width: 380px;
+  height: 50px;
+  padding: 0 20px;
+
+  border: 2px solid #dadada;
+  border-radius: 15px;
+}
+
+.cts-results {
+  display: flex;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.cts-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* background-color: orange; */
+}
+
+.cts-tag {
+  background-color: #eeebeb;
+  border-radius: 15px;
+  position: relative;
+
+  width: 200px;
+  height: auto;
+  padding: 20px 0 10px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  cursor: pointer;
+
+  transition: background-color 0.1s ease-out, opacity 0.3s ease-in-out;
+}
+
+.cts-tag:hover {
+  background-color: #dadada;
+}
+
+.cts-images {
+  /* background-color: blue; */
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cts-icon {
+  background-color: rgba(124, 110, 104, 0.534);
+  border-radius: 10px;
+  padding: 2px;
+
+  height: 50px;
+  width: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+}
+
+.cts-display {
+  /* background-color: aqua; */
+  height: auto;
+  width: 180px;
+}
+
+.cts-name {
+  margin-top: 10px;
+  padding-left: 10px;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.cosmetics-tag-container {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Start hidden outside the viewport */
+  width: 300px; /* Adjust width as needed */
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 1s;
+  z-index: 100;
+}
+
+.slide-in {
+  right: 180px; /* Slide into view */
+}
+
+.hidden {
+  right: -100%; /* Keep it off-screen when hidden */
+}

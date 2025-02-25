@@ -1,0 +1,605 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "user_id": "0",
+      "title": "Starting post!!",
+      "body": "this is ur first post! you can edit this however you want!",
+      "image": "placeholder_0.jpg",
+      "likes": 2
+    },
+    {
+      "id": "2",
+      "user_id": "1",
+      "title": "New outfit!",
+      "body": "I look cute ong bruh",
+      "image": "cute_new_outfit.jpg",
+      "likes": 2
+    },
+    {
+      "id": "3",
+      "user_id": "2",
+      "title": "Adventurer vibes",
+      "body": "Found this amazing cloak in a chest!",
+      "image": "placeholder_1.png",
+      "likes": 5
+    },
+    {
+      "id": "4",
+      "user_id": "3",
+      "title": "Cozy winter look",
+      "body": "Snowball fights incoming!",
+      "image": "placeholder_2.png",
+      "likes": 8
+    },
+    {
+      "id": "5",
+      "user_id": "4",
+      "title": "End of woods",
+      "body": "Finally got the royal cape! Time to rule.",
+      "image": "placeholder_3.jpg",
+      "likes": 12
+    },
+    {
+      "id": "6",
+      "user_id": "1",
+      "title": "Festival ready",
+      "body": "The lantern festival is so pretty.",
+      "image": "placeholder_4.jpg",
+      "likes": 7
+    },
+    {
+      "id": "7",
+      "user_id": "5",
+      "title": "Explorer style",
+      "body": "This helmet is giving ultimate explorer vibes.",
+      "image": "placeholder_5.jpg",
+      "likes": 6
+    },
+    {
+      "id": "8",
+      "user_id": "6",
+      "title": "Sky child!",
+      "body": "Love how this cape flows while flying.",
+      "image": "placeholder_6.jpg",
+      "likes": 10
+    },
+    {
+      "id": "9",
+      "user_id": "3",
+      "title": "Shiny and new",
+      "body": "Gold boots are so shiny, can't stop staring!",
+      "image": "placeholder_7.jpg",
+      "likes": 4
+    },
+    {
+      "id": "10",
+      "user_id": "2",
+      "title": "Forest guardian",
+      "body": "Perfect outfit for wandering the woods.",
+      "image": "placeholder_8.png",
+      "likes": 9
+    },
+    {
+      "id": "b46a",
+      "title": "text post",
+      "body": "only uploading text posts is supported for now....until i figure out how to upload images files.....",
+      "user_id": "1",
+      "image": "",
+      "likes": 0
+    },
+    {
+      "id": "6045",
+      "title": "outfit request example!",
+      "body": "hi can anyone show me what the days of bloom cape looks like? preferably in forest closet lighting - thank you!",
+      "user_id": "1",
+      "image": "",
+      "likes": 0
+    },
+    {
+      "id": "c012",
+      "title": "hi this is a new post",
+      "body": "im gona say something rly cool :333",
+      "user_id": "0",
+      "image": "",
+      "likes": 0
+    }
+  ],
+  "users": [
+    {
+      "id": "0",
+      "username": "guest",
+      "password": "coolguest",
+      "email": "guest@usc.edu",
+      "favCosmetics": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "1",
+      "username": "yenayae",
+      "password": "passwurd",
+      "email": "alee2167@usc.edu",
+      "favCosmetics": [
+        "1",
+        "2"
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "congrats!",
+      "post_id": "1"
+    },
+    {
+      "id": "2",
+      "body": "Love that this is free!",
+      "post_id": "1"
+    }
+  ],
+  "likedPosts": [
+    {
+      "user_id": "1",
+      "post_id": "1",
+      "id": "9eea"
+    },
+    {
+      "id": "fe31",
+      "post_id": "2",
+      "user_id": "0",
+      "date_liked": "2024-12-11T07:12:10.845Z"
+    },
+    {
+      "id": "f1ce",
+      "post_id": "3",
+      "user_id": "0",
+      "date_liked": "2024-12-11T07:12:10.891Z"
+    }
+  ],
+  "cosmetics": [
+    {
+      "id": "1",
+      "availability_id": "2",
+      "type_id": "1",
+      "name": "base_outfit",
+      "icon": "base_outfit_icon.webp",
+      "source_id": "1",
+      "costNum": 0,
+      "costType": null
+    },
+    {
+      "id": "2",
+      "availability_id": "1",
+      "type_id": "1",
+      "name": "hide_n_seek_pioneer_outfit",
+      "icon": "hide_n_seek_pioneer_outfit_icon.webp",
+      "source_id": "2",
+      "costNum": 15,
+      "costType": "heart"
+    },
+    {
+      "id": "3",
+      "availability_id": "1",
+      "type_id": "1",
+      "name": "shivering_trailblazer_outfit",
+      "icon": "shivering_trailblazer_outfit_icon.webp",
+      "source_id": "3",
+      "costNum": 2,
+      "costType": "heart"
+    },
+    {
+      "id": "4",
+      "availability_id": "1",
+      "type_id": "1",
+      "name": "polite_scholar_outfit",
+      "icon": "polite_scholar_outfit_icon.webp",
+      "source_id": "4",
+      "costNum": 2,
+      "costType": "heart"
+    },
+    {
+      "id": "5",
+      "availability_id": "1",
+      "type_id": "1",
+      "name": "pointing_candlemaker_outfit",
+      "icon": "pointing_candlemaker_outfit_icon.webp",
+      "source_id": "5",
+      "costNum": 4,
+      "costType": "heart"
+    },
+    {
+      "id": "6",
+      "availability_id": "1",
+      "type_id": "1",
+      "name": "confident_sightseer_outfit",
+      "icon": "confident_sightseer_outfit_icon.webp",
+      "source_id": "6",
+      "costNum": 5,
+      "costType": "heart"
+    },
+    {
+      "id": "7",
+      "availability_id": "1",
+      "type_id": "1",
+      "name": "memory_whisperer_outfit",
+      "icon": "memory_whisperer_outfit_icon.webp",
+      "source_id": "7",
+      "costNum": 3,
+      "costType": "heart"
+    },
+    {
+      "id": "8",
+      "availability_id": "1",
+      "type_id": "1",
+      "name": "ushering_stargazer_outfit",
+      "icon": "ushering_stargazer_outfit_icon.webp",
+      "source_id": "8",
+      "costNum": 4,
+      "costType": "heart"
+    },
+    {
+      "id": "9",
+      "availability_id": "1",
+      "type_id": "1",
+      "name": "butterfly_charmer_outfit",
+      "icon": "butterfly_charmer_outfit_icon.webp",
+      "source_id": "9",
+      "costNum": 4,
+      "costType": "heart"
+    },
+    {
+      "id": "10",
+      "availability_id": "10",
+      "type_id": "1",
+      "name": "boogie_kid_outfit",
+      "icon": "boogie_kid_outfit_icon.webp",
+      "source_id": "10",
+      "costNum": 60,
+      "costType": "candle"
+    },
+    {
+      "id": "11",
+      "availability_id": "10",
+      "type_id": "1",
+      "name": "troupe_greeter_outfit",
+      "icon": "troupe_greeter_outfit_icon.webp",
+      "source_id": "11",
+      "costNum": 70,
+      "costType": "candle"
+    },
+    {
+      "id": "12",
+      "availability_id": "10",
+      "type_id": "1",
+      "name": "troupe_juggler_outfit",
+      "icon": "troupe_juggler_outfit_icon.webp",
+      "source_id": "12",
+      "costNum": 75,
+      "costType": "candle"
+    },
+    {
+      "id": "13",
+      "availability_id": "10",
+      "type_id": "1",
+      "name": "festival_spin_dancer_outfit",
+      "icon": "festival_spin_dancer_outfit_icon.webp",
+      "source_id": "13",
+      "costNum": 65,
+      "costType": "candle"
+    },
+    {
+      "id": "14",
+      "availability_id": "10",
+      "type_id": "1",
+      "name": "admiring_actor_outfit",
+      "icon": "admiring_actor_outfit_icon.webp",
+      "source_id": "14",
+      "costNum": 65,
+      "costType": "candle"
+    },
+    {
+      "id": "15",
+      "availability_id": "10",
+      "type_id": "1",
+      "name": "jelly_whisperer_outfit",
+      "icon": "jelly_whisperer_outfit_icon.webp",
+      "source_id": "15",
+      "costNum": 65,
+      "costType": "candle"
+    },
+    {
+      "id": "16",
+      "availability_id": "10",
+      "type_id": "1",
+      "name": "rallying_thrillseeker_outfit",
+      "icon": "rallying_thrillseeker_outfit_icon.webp",
+      "source_id": "16",
+      "costNum": 70,
+      "costType": "candle"
+    },
+    {
+      "id": "17",
+      "availability_id": "10",
+      "type_id": "1",
+      "name": "prophet_of_fire_outfit",
+      "icon": "prophet_of_fire_outfit_icon.webp",
+      "source_id": "17",
+      "costNum": 75,
+      "costType": "candle"
+    },
+    {
+      "id": "18",
+      "availability_id": "10",
+      "type_id": "1",
+      "name": "peeking_postman_outfit",
+      "icon": "peeking_postman_outfit_icon.webp",
+      "source_id": "18",
+      "costNum": 70,
+      "costType": "candle"
+    },
+    {
+      "id": "19",
+      "availability_id": "10",
+      "type_id": "1",
+      "name": "bearhug_hermit_outfit",
+      "icon": "bearhug_hermit_outfit_icon.webp",
+      "source_id": "19",
+      "costNum": 70,
+      "costType": "candle"
+    },
+    {
+      "id": "20",
+      "availability_id": "10",
+      "type_id": "1",
+      "name": "chuckling_scout_outfit",
+      "icon": "chuckling_scout_outfit_icon.webp",
+      "source_id": "20",
+      "costNum": 65,
+      "costType": "candle"
+    },
+    {
+      "id": "21",
+      "availability_id": "10",
+      "type_id": "1",
+      "name": "gloating_narcissist_outfit",
+      "icon": "gloating_narcissist_outfit_icon.webp",
+      "source_id": "21",
+      "costNum": 65,
+      "costType": "candle"
+    }
+  ],
+  "cosmeticImages": [
+    {
+      "id": "1",
+      "cosmetic_id": "1",
+      "url": "base_outfit_front.webp",
+      "caption": "base_outfit_front"
+    },
+    {
+      "id": "2",
+      "cosmetic_id": "1",
+      "url": "base_outfit_back.webp",
+      "caption": "base_outfit_back"
+    },
+    {
+      "id": "3",
+      "cosmetic_id": "2",
+      "url": "hide_n_seek_outfit_front.webp",
+      "caption": "hide_n_seek_outfit_front"
+    },
+    {
+      "id": "4",
+      "cosmetic_id": "3",
+      "url": "shivering_trailblazer_outfit_front.webp",
+      "caption": "shivering_trailblazer_outfit_front"
+    },
+    {
+      "id": "5",
+      "cosmetic_id": "4",
+      "url": "polite_scholar_outfit_front.webp",
+      "caption": "polite_scholar_outfit_front"
+    },
+    {
+      "id": "6",
+      "cosmetic_id": "5",
+      "url": "pointing_candlemaker_outfit_front.webp",
+      "caption": "pointing_candlemaker_outfit_front"
+    },
+    {
+      "id": "7",
+      "cosmetic_id": "6",
+      "url": "confident_sightseer_outfit_front.webp",
+      "caption": "confident_sightseer_outfit_front"
+    },
+    {
+      "id": "8",
+      "cosmetic_id": "7",
+      "url": "memory_whisperer_outfit_front.webp",
+      "caption": "memory_whisperer_outfit_front"
+    },
+    {
+      "id": "9",
+      "cosmetic_id": "8",
+      "url": "ushering_stargazer_outfit_front.webp",
+      "caption": "ushering_stargazer_outfit_front"
+    },
+    {
+      "id": "10",
+      "cosmetic_id": "9",
+      "url": "butterfly_charmer_outfit_front.webp",
+      "caption": "butterfly_charmer_outfit_front"
+    },
+    {
+      "id": "11",
+      "cosmetic_id": "10",
+      "url": "boogie_kid_outfit_front.webp",
+      "caption": "boogie_kid_outfit_front"
+    },
+    {
+      "id": "12",
+      "cosmetic_id": "11",
+      "url": "troupe_greeter_outfit_front.webp",
+      "caption": "troupe_greeter_outfit_front"
+    },
+    {
+      "id": "13",
+      "cosmetic_id": "12",
+      "url": "troupe_juggler_outfit_front.webp",
+      "caption": "troupe_juggler_outfit_front"
+    },
+    {
+      "id": "14",
+      "cosmetic_id": "13",
+      "url": "festival_spin_dancer_outfit_front.webp",
+      "caption": "festival_spin_dancer_outfit_front"
+    },
+    {
+      "id": "15",
+      "cosmetic_id": "14",
+      "url": "admiring_actor_outfit_front.webp",
+      "caption": "admiring_actor_outfit_front"
+    },
+    {
+      "id": "16",
+      "cosmetic_id": "15",
+      "url": "jelly_whisperer_outfit_front.webp",
+      "caption": "jelly_whisperer_outfit_front"
+    },
+    {
+      "id": "17",
+      "cosmetic_id": "16",
+      "url": "rallying_thrillseeker_outfit_front.webp",
+      "caption": "rallying_thrillseeker_outfit_front"
+    },
+    {
+      "id": "18",
+      "cosmetic_id": "17",
+      "url": "prophet_of_fire_outfit_front.webp",
+      "caption": "prophet_of_fire_outfit_front"
+    },
+    {
+      "id": "19",
+      "cosmetic_id": "18",
+      "url": "peeking_postman_outfit_front.webp",
+      "caption": "peeking_postman_outfit_front"
+    },
+    {
+      "id": "20",
+      "cosmetic_id": "19",
+      "url": "bearhug_hermit_outfit_front.webp",
+      "caption": "bearhug_hermit_outfit_front"
+    }
+  ],
+  "sources": [
+    {
+      "id": "1",
+      "icon": null,
+      "name": "base",
+      "type": "base"
+    },
+    {
+      "id": "2",
+      "icon": "butterfly_charmer.png",
+      "name": "butterfly charmer",
+      "type": "spirit"
+    }
+  ],
+  "availability": [
+    {
+      "id": "1",
+      "name": "permanent"
+    },
+    {
+      "id": "2",
+      "name": "limited offer"
+    },
+    {
+      "id": "3",
+      "name": "conditional"
+    },
+    {
+      "id": "4",
+      "name": "regular spirit"
+    },
+    {
+      "id": "5",
+      "name": "seasonal spirit"
+    }
+  ],
+  "type": [
+    {
+      "id": "1",
+      "parent_type_id": "1",
+      "name": "outfit",
+      "icon": "outfit.png"
+    },
+    {
+      "id": "2",
+      "parent_id": "1",
+      "name": "shoes",
+      "icon": "shoes.png"
+    },
+    {
+      "id": "3",
+      "parent_type_id": "2",
+      "name": "masks",
+      "icon": "masks.png"
+    },
+    {
+      "id": "4",
+      "parent_type_id": "2",
+      "name": "face accessories",
+      "icon": "face_accessories.png"
+    },
+    {
+      "id": "5",
+      "parent_type_id": "2",
+      "name": "necklaces",
+      "icon": "necklaces.png"
+    },
+    {
+      "id": "6",
+      "parent_type_id": "3",
+      "name": "hair",
+      "icon": "hair.png"
+    },
+    {
+      "id": "7",
+      "parent_type_id": "3",
+      "name": "hair accessories",
+      "icon": "hair_accessories.png"
+    },
+    {
+      "id": "8",
+      "parent_type_id": "3",
+      "name": "head accessories",
+      "icon": "head_accessories.png"
+    },
+    {
+      "id": "9",
+      "parent_type_id": "4",
+      "name": "capes",
+      "icon": "capes.png"
+    },
+    {
+      "id": "10",
+      "parent_type_id": "5",
+      "name": "held props",
+      "icon": "held_props.png"
+    },
+    {
+      "id": "11",
+      "parent_type_id": "5",
+      "name": "large placeable props",
+      "icon": "large_placeable_props.png"
+    },
+    {
+      "id": "12",
+      "parent_type_id": "5",
+      "name": "small placeable props",
+      "icon": "small_placeable_props.png"
+    }
+  ]
+}

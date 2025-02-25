@@ -1,0 +1,51 @@
+/* body {
+  background-color: #b9b2ac;
+} */
+.submit-button {
+  width: 102%;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #b9b2ac;
+  color: #b9b2ac;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #b9b2ac;
+  color: white;
+}
+
+#subject {
+  /* background-color: pink; */
+  width: 103%;
+  color: #696765;
+  border: 1px solid #b9b2ac;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+#checkbox {
+  /* background-color: pink; */
+  width: 103%;
+  margin-top: 10px;
+  color: #696765;
+  font-size: 0.9em;
+}
+
+#radio-buttons {
+  /* background-color: pink; */
+  color: #696765;
+  width: 103%;
+
+  font-size: 0.9em;
+}
+
+#submit {
+  margin: 10px 0;
+}
+
+.test {
+  background-color: #eeebeb;
+}

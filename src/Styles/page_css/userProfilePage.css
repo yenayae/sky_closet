@@ -1,0 +1,95 @@
+.profile-header {
+  /* background-color: pink; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  padding: 10px 30px;
+
+  position: relative;
+}
+
+.profile-user-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-user-details {
+  /* background-color: lightgreen; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.profile-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  margin-right: 25px;
+}
+
+.username-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profile-username {
+  /* background-color: red; */
+  font-size: 2.5em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.profile-followers {
+  /* background-color: aqua; */
+  margin: 10px 0 10px 0;
+}
+
+.profile-followers span {
+  margin-right: 10px;
+}
+
+.profile-content-container {
+  /* background-color: lightblue; */
+}
+
+.profile-content-header {
+  /* background-color: pink; */
+  padding-left: 50px;
+  margin: 20px 0;
+}
+
+.profile-content-tab {
+  padding: 0 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-right: 20px;
+  padding-bottom: 5px;
+}
+
+.profile-content-tab.selected {
+  border-bottom: 2px solid black;
+}
+
+.profile-options {
+  font-size: 1.4em;
+  cursor: pointer;
+
+  color: #929292;
+
+  padding: 7px;
+  border-radius: 50%;
+
+  transition: 0.1s ease;
+
+  position: relative;
+  top: 6px;
+
+  margin-left: 5px;
+}

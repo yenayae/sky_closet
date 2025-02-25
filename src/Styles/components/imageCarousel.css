@@ -1,0 +1,177 @@
+.carousel {
+  /* background-color: pink; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  min-height: 500px;
+  height: auto;
+}
+
+.carousel.postPage {
+  background-color: rgb(248, 248, 248);
+}
+
+.carousel.postPage.error {
+  background-color: rgba(236, 208, 208, 0.986);
+  border: 1px solid #e75858;
+}
+
+.carousel.cosmeticDetails {
+  border: 1px solid #dadada;
+}
+.carousel.postPage.image-carousel-empty {
+  cursor: pointer;
+  border: 1px solid #dadada;
+}
+
+.carousel.postPage.image-carousel-filled {
+  min-height: 0;
+  cursor: default;
+}
+
+.post-images-carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.plus-icon {
+  color: #26343f;
+  font-size: 1.75rem;
+}
+
+.inner {
+  white-space: nowrap;
+  /* display: flex; */
+  transition: transform 0.3s;
+  /* width: 400px; */
+
+  /* overflow: hidden; */
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); */
+}
+
+.carousel-item,
+.file-carousel-item {
+  display: inline-flex;
+  justify-content: center;
+
+  animation: fadeInOpacity 0.5s ease-in;
+
+  min-height: 500px;
+  height: auto;
+
+  width: 400px;
+}
+
+.carousel-item {
+  align-items: center;
+}
+
+.file-carousel-item {
+  /* remove min height requirement for file carousel */
+  min-height: 0;
+  vertical-align: top;
+}
+
+.carousel-item img {
+  /* background-color: pink; */
+  width: 70%;
+  max-width: 250px;
+}
+
+.file-carousel-item img {
+  width: 100%;
+}
+
+@keyframes fadeInOpacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.carousel-img {
+  /* background-color: aqua; */
+  /* width: 500px; */
+  /* height: auto; */
+  padding: 20px 20px 0 20px;
+}
+
+.carousel-buttons {
+  display: flex;
+  justify-content: space-evenly;
+
+  animation-delay: 0.5s;
+  animation: fadeInOpacity 0.4s ease-in;
+  background-color: rgb(248, 248, 248);
+  z-index: 100;
+}
+
+.button-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 5px;
+  color: #26343f;
+}
+
+.button-arrow.disabled {
+  cursor: default;
+  color: rgb(175, 175, 175);
+}
+
+.indicators {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.indicator-buttons {
+  border: none;
+  cursor: pointer;
+}
+
+.indicators > button {
+  margin: 5px;
+  background: none;
+}
+
+.indicator-symbol {
+  color: grey;
+  transition: color 0.2s ease;
+  color: rgb(233, 233, 233);
+}
+
+.indicator-symbol-active {
+  color: #26343f;
+}
+
+.no-images-carousel {
+  /* background-color: pink; */
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-container {
+  width: 40%;
+  text-align: center;
+}
+
+.error-icon {
+  font-size: 1.7em;
+}
+
+.error-message {
+  margin-top: 5px;
+}

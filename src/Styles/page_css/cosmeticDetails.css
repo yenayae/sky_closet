@@ -1,0 +1,45 @@
+.cosmetic-details {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+
+  padding: 20px;
+  background-color: rgb(248, 248, 248);
+  border-radius: 10px;
+
+  width: 80%;
+}
+
+.cosmetic-details-container {
+  padding: 0 20px;
+  width: 60%;
+}
+
+.cosmetic-details-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cosmetic-details-name {
+  margin: 0;
+  font-size: 2em;
+}
+
+.relevant-posts {
+  margin-top: 10px;
+}
+
+.relevant-posts-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.relevant-posts-title {
+  width: 90%;
+  margin: 0;
+  margin-top: 20px;
+  /* margin-left: 30px; */
+}

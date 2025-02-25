@@ -1,0 +1,36 @@
+.portal {
+  height: 300px;
+  width: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.closet-type {
+  height: auto;
+  width: 40px;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+}
+
+.closet-image {
+  height: 100%;
+  width: 100%;
+
+  transition: 0.3s ease;
+}
+
+.portal:hover .closet-image {
+  /* glow effect start*/
+  -webkit-filter: drop-shadow(0 0 5px var(--hover-glow-color));
+  filter: drop-shadow(0 0px 5px var(--hover-glow-color));
+  /* glow effect end */
+}

@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "new_romantic";
+  src: url("../Fonts/new_romantics/ROMANTIC.TTF");
+}
+
+:root {
+  --glow-color: rgba(236, 213, 152, 0.623);
+  --hover-glow-color: rgba(233, 209, 150, 0.884);
+}
+
+.glow {
+  -webkit-filter: drop-shadow(0 0 5px var(--glow-color));
+  filter: drop-shadow(0 0px 5px var(--glow-color));
+}
+
+a {
+  color: rgb(70, 144, 204);
+}
+
+.nav-button {
+  background-color: #e6e4e5;
+  border: none;
+  border-radius: 10px;
+  height: 100%;
+  padding: 0 20px;
+  margin: 0 2px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: #b9b2ac;
+  color: white;
+}
+
+.error,
+.error-message,
+.error-icon {
+  color: rgb(228, 33, 33);
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.liked-post {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.2s ease;
+}
+
+.liked-post:hover {
+  background-color: #eeebeb;
+}
+
+.subButton.selected {
+  border-bottom: 5px solid rgb(212, 191, 133);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(3px);
+    /* background-color: none; */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    /* background-color: rgba(20, 18, 14, 0.5); */
+  }
+}

@@ -20,7 +20,12 @@ const Home = () => {
     <div>
       <HomeNavBar />
       <div className="content">
-        <div className="home-banner">
+        <div
+          className="home-banner"
+          style={{
+            backgroundImage: `url("/img/assets/home/night_sky.jpeg")`,
+          }}
+        >
           <div className="banner-content">
             <div className="logo-wrapper">
               <img

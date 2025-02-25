@@ -54,7 +54,7 @@ export default function HomeNavBar() {
           <button className="home-nav-button" data-testid="cosmetics-button">
             <img
               className="shrine-icon"
-              src="/img/assets/home/outfit_shrine.webp"
+              src="/img/assets/home/outfit_shrine.png"
               alt=""
             />
           </button>

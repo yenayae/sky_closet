@@ -50,8 +50,13 @@ export default function HomeNavBar() {
             <FontAwesomeIcon icon={faHouse} />
           </button>
         </Link>
+        <span>Home</span>
+
         <Link to="/cosmetics" style={{ height: "100%" }}>
-          <button className="home-nav-button" data-testid="cosmetics-button">
+          <button
+            className="home-nav-button shrine"
+            data-testid="cosmetics-button"
+          >
             <img
               className="shrine-icon"
               src="/img/assets/home/outfit_shrine.png"

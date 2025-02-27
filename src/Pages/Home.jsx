@@ -2,6 +2,8 @@ import NavBar from "../Components/NavBar";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import { useAuth } from "../Hooks/authContext";
 
@@ -20,17 +22,37 @@ const Home = () => {
   const decorIcons = ["head", "hair", "mask", "necklace", "cape", "outfit"];
   const [icons, setIcons] = useState([...decorIcons, ...decorIcons]);
 
+  const { ref: homeRef, inView: homeInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const { ref: card1Ref, inView: card1InView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const { ref: card2Ref, inView: card2InView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
   return (
     <div>
       <HomeNavBar />
       <div className="content">
-        <div
+        <motion.div
+          ref={homeRef}
           className="home-banner"
           style={{
             backgroundImage: `url("/img/assets/home/night_sky.png")`,
           }}
         >
-          <div className="banner-content">
+          <motion.div
+            className="banner-content"
+            initial={{ opacity: 0, y: 25 }}
+            animate={homeInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+          >
             <div className="logo-wrapper">
               <img
                 className="sky-logo"
@@ -45,71 +67,97 @@ const Home = () => {
                 textContent={"to outfit shrine"}
               />
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        <div className="home-body card1">
-          <div className="left-card">
-            <div className="decor-posts">
-              <div className="decor-post1">
-                <DecorPost image={`${imagePath}color_post.jpg`} width={240} />
+        <motion.div
+          ref={card1Ref}
+          className="home-body card1"
+          initial={{ opacity: 0, y: 30 }}
+          animate={card1InView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="home-body card1">
+            <div className="left-card">
+              <div className="decor-posts">
+                <motion.div
+                  className="decor-post1"
+                  initial={{ opacity: 0, y: 25 }}
+                  animate={card1InView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                >
+                  <DecorPost image={`${imagePath}color_post.jpg`} width={240} />
+                </motion.div>
+                <motion.div
+                  className="decor-post2"
+                  initial={{ opacity: 0, y: 25 }}
+                  animate={card1InView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  <DecorPost image={`${imagePath}dance_post.jpg`} width={300} />
+                </motion.div>
               </div>
-              <div className="decor-post2">
-                <DecorPost image={`${imagePath}dance_post.jpg`} width={300} />
+            </div>
+            <div className="right-card">
+              <div className="home-card">
+                <h2>explore other sky kids outfits</h2>
+                <p>See how other Sky kids have decorated themselves</p>
+                <div className="card1-button">
+                  <HomeButton toLink="/blog" textContent="explore posts" />
+                </div>
               </div>
             </div>
           </div>
-          <div className="right-card">
-            <div className="home-card">
-              <h2>explore other sky kids outfits</h2>
-              <p>See how other Sky kids have decorated themselves</p>
-              <div className="card1-button">
-                <HomeButton toLink="/blog" textContent="explore posts" />
-              </div>
-            </div>
-          </div>
-        </div>
+        </motion.div>
 
-        <div className="home-body card2">
-          <div className="left-card">
-            <div className="home-card">
-              <h2>join the community!</h2>
-              <p>
-                Share your own outfits and become a part of our cosmetics
-                gallery
-              </p>
-              <div className="card1-button">
-                <HomeButton toLink="/login" textContent="make an account" />
+        <motion.div
+          ref={card2Ref}
+          className="home-body card2"
+          initial={{ opacity: 0, y: 30 }}
+          animate={card2InView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="home-body card2">
+            <div className="left-card">
+              <div className="home-card">
+                <h2>join the community!</h2>
+                <p>
+                  Share your own outfits and become a part of our cosmetics
+                  gallery
+                </p>
+                <div className="card1-button">
+                  <HomeButton toLink="/login" textContent="make an account" />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="right-card">
-            <div className="decor-icon-layout">
-              {/* <img
+            <div className="right-card">
+              <div className="decor-icon-layout">
+                {/* <img
                 className="card2-image"
                 src={`${imagePath}pink_outfit.jpg`}
                 alt="img"
               /> */}
 
-              <DecorPost
-                image={`${imagePath}pink_outfit.jpg`}
-                width={300}
-                heart={false}
-              />
-              <div className="decor-icon-wrapper">
-                <div className="decor-icon-slider">
-                  {icons.map((icon) => (
-                    <img
-                      className="decor-icon"
-                      src={`${imagePath}${icon}_icon.png`}
-                      alt=""
-                    />
-                  ))}
+                <DecorPost
+                  image={`${imagePath}pink_outfit.jpg`}
+                  width={300}
+                  heart={false}
+                />
+                <div className="decor-icon-wrapper">
+                  <div className="decor-icon-slider">
+                    {icons.map((icon) => (
+                      <img
+                        className="decor-icon"
+                        src={`${imagePath}${icon}_icon.png`}
+                        alt=""
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

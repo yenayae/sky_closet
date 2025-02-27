@@ -71,40 +71,38 @@ const Home = () => {
         </motion.div>
 
         <motion.div
-          ref={card1Ref}
           className="home-body card1"
+          ref={card1Ref}
           initial={{ opacity: 0, y: 30 }}
           animate={card1InView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <div className="home-body card1">
-            <div className="left-card">
-              <div className="decor-posts">
-                <motion.div
-                  className="decor-post1"
-                  initial={{ opacity: 0, y: 25 }}
-                  animate={card1InView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.8, delay: 0.5 }}
-                >
-                  <DecorPost image={`${imagePath}color_post.jpg`} width={240} />
-                </motion.div>
-                <motion.div
-                  className="decor-post2"
-                  initial={{ opacity: 0, y: 25 }}
-                  animate={card1InView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                >
-                  <DecorPost image={`${imagePath}dance_post.jpg`} width={300} />
-                </motion.div>
-              </div>
+          <div className="left-card">
+            <div className="decor-posts">
+              <motion.div
+                className="decor-post1"
+                initial={{ opacity: 0, y: 25 }}
+                animate={card1InView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.5 }}
+              >
+                <DecorPost image={`${imagePath}color_post.jpg`} width={240} />
+              </motion.div>
+              <motion.div
+                className="decor-post2"
+                initial={{ opacity: 0, y: 25 }}
+                animate={card1InView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <DecorPost image={`${imagePath}dance_post.jpg`} width={300} />
+              </motion.div>
             </div>
-            <div className="right-card">
-              <div className="home-card">
-                <h2>explore other sky kids outfits</h2>
-                <p>See how other Sky kids have decorated themselves</p>
-                <div className="card1-button">
-                  <HomeButton toLink="/blog" textContent="explore posts" />
-                </div>
+          </div>
+          <div className="right-card">
+            <div className="home-card">
+              <h2>explore other sky kids outfits</h2>
+              <p>See how other Sky kids have decorated themselves</p>
+              <div className="card1-button">
+                <HomeButton toLink="/blog" textContent="explore posts" />
               </div>
             </div>
           </div>

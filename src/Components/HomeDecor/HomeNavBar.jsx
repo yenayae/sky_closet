@@ -14,9 +14,13 @@ export default function HomeNavBar() {
   const { user } = useAuth();
 
   const [currentUser, setCurrentUsername] = useState("");
+  const [showTooltip, setShowTooltip] = useState(false);
+  const [tooltipText, setTooltipText] = useState("");
+  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
+
   useEffect(() => {
     const getUsername = async () => {
-      if (!user) return; // Ensure user exists
+      if (!user) return;
       const { data, error } = await supabase
         .from("users")
         .select("username")
@@ -33,6 +37,15 @@ export default function HomeNavBar() {
     getUsername();
   }, [user]);
 
+  const handleMouseEnter = (text) => {
+    setTooltipText(text);
+    setShowTooltip(true);
+  };
+
+  const handleMouseMove = (e) => {
+    setTooltipPos({ x: e.clientX, y: e.clientY });
+  };
+
   return (
     <div style={{ padding: "10px" }}>
       <div
@@ -45,41 +58,83 @@ export default function HomeNavBar() {
           width: "100%",
         }}
       >
-        <Link to="/" style={{ height: "100%" }}>
-          <button className="home-nav-button" data-testid="home-button">
-            <FontAwesomeIcon icon={faHouse} />
-          </button>
-        </Link>
-        <span>Home</span>
+        <div className="home-nav-wrapper">
+          <Link to="/" style={{ height: "100%" }}>
+            <button
+              className="home-nav-button"
+              data-testid="home-button"
+              onMouseEnter={() => handleMouseEnter("Home")}
+              onMouseMove={handleMouseMove}
+              onMouseLeave={() => setShowTooltip(false)}
+            >
+              <FontAwesomeIcon icon={faHouse} />
+            </button>
+          </Link>
+        </div>
 
-        <Link to="/cosmetics" style={{ height: "100%" }}>
-          <button
-            className="home-nav-button shrine"
-            data-testid="cosmetics-button"
+        <div className="home-nav-wrapper">
+          <Link to="/cosmetics" style={{ height: "100%" }}>
+            <button
+              className="home-nav-button shrine"
+              data-testid="cosmetics-button"
+              onMouseEnter={() => handleMouseEnter("Cosmetics")}
+              onMouseMove={handleMouseMove}
+              onMouseLeave={() => setShowTooltip(false)}
+            >
+              <img
+                className="shrine-icon"
+                src="/img/assets/home/outfit_shrine.png"
+                alt=""
+              />
+            </button>
+          </Link>
+        </div>
+
+        <div className="home-nav-wrapper">
+          <Link to="/blog" style={{ height: "100%" }}>
+            <button
+              className="home-nav-button"
+              data-testid="community-button"
+              onMouseEnter={() => handleMouseEnter("Explore")}
+              onMouseMove={handleMouseMove}
+              onMouseLeave={() => setShowTooltip(false)}
+            >
+              <FontAwesomeIcon icon={faCompass} />
+            </button>
+          </Link>
+        </div>
+
+        <div className="home-nav-wrapper">
+          <Link
+            to={currentUser ? `/profile/${currentUser}` : "/login"}
+            style={{ height: "100%" }}
           >
-            <img
-              className="shrine-icon"
-              src="/img/assets/home/outfit_shrine.png"
-              alt=""
-            />
-          </button>
-        </Link>
-
-        <Link to="/blog" style={{ height: "100%" }}>
-          <button className="home-nav-button" data-testid="community-button">
-            <FontAwesomeIcon icon={faCompass} />
-          </button>
-        </Link>
-
-        <Link
-          to={currentUser ? `/profile/${currentUser}` : "/login"}
-          style={{ height: "100%" }}
-        >
-          <button className="home-nav-button">
-            <FontAwesomeIcon icon={faUser} />
-          </button>
-        </Link>
+            <button
+              className="home-nav-button"
+              onMouseEnter={() => handleMouseEnter("Profile")}
+              onMouseMove={handleMouseMove}
+              onMouseLeave={() => setShowTooltip(false)}
+            >
+              <FontAwesomeIcon icon={faUser} />
+            </button>
+          </Link>
+        </div>
       </div>
+
+      {showTooltip && (
+        <div
+          className="home-nav-tooltip"
+          style={{
+            position: "fixed",
+            top: tooltipPos.y + 19,
+            left: tooltipPos.x + 9,
+            opacity: showTooltip ? 1 : 0,
+            pointerEvents: "none",
+          }}
+        >
+          {tooltipText}
+        </div>
+      )}
     </div>
   );
 }

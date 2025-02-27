@@ -39,6 +39,9 @@ export default function EditPost() {
   const imagesArray = postDetails.posts_images.map((image) => {
     return image.public_url;
   });
+
+  console.log(imagesArray);
+
   const cosmeticTags = postDetails.posts_cosmetic_tags.flatMap(
     (item) => item.cosmetics
   );
@@ -246,7 +249,7 @@ export default function EditPost() {
                 className="add-images"
               >
                 <ImageCarousel
-                  items={imageUrls}
+                  items={imagesArray}
                   pageContext={"postPage"}
                   errorMessage={imageError}
                 ></ImageCarousel>

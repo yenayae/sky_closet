@@ -3,7 +3,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 import "../../Styles/components/home/decorPost.css";
 
-const DecorPost = ({ image, width }) => {
+const DecorPost = ({ image, width, heart = true }) => {
   return (
     <div
       className="decor-post"
@@ -19,7 +19,7 @@ const DecorPost = ({ image, width }) => {
           width: `${width}px`,
         }}
       />
-      <FontAwesomeIcon icon={faHeart} className="decor-heart-icon" />
+      {heart && <FontAwesomeIcon icon={faHeart} className="decor-heart-icon" />}
     </div>
   );
 };

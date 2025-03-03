@@ -69,7 +69,6 @@ export const ImageCarousel = ({
         <div className="loader">Loading...</div>
       ) : items.length === 0 ? (
         //if items is empty, then either no images or images yet to be added on post page
-
         pageContext === "postPage" ? (
           <div className="post-images-carousel">
             {errorMessage ? (

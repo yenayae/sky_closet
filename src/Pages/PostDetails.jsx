@@ -79,40 +79,6 @@ const PostDetails = () => {
     .map((tag) => tag.cosmetic_id)
     .flat();
 
-  // useEffect(() => {
-  //   const fetchCosmeticPosts = async () => {
-  //     setFetchingPosts(true);
-  //     const { data, error } = await supabase
-  //       .from("posts_cosmetic_tags")
-  //       .select(
-  //         `
-  //           *,
-  //           posts(*, posts_images(image_url))
-  //         `
-  //       )
-  //       .in("cosmetic_id", cosmeticTagsIDs);
-  //     if (error) {
-  //       throw new Error("Error fetching posts: " + error.message);
-  //     }
-
-  //     console.log("pre filter", data);
-  //     console.log(postDetails.id);
-
-  //     let posts = data
-  //       .map((entry) => entry.posts)
-  //       .flat()
-  //       .filter((post) => post.id !== postDetails.id);
-
-  //     posts = processPostImages(posts);
-  //     console.log(posts);
-
-  //     setCosmeticPosts(posts);
-  //     setFetchingPosts(false);
-  //   };
-
-  //   fetchCosmeticPosts();
-  // }, []);
-
   //report
   const [showReportForm, setShowReportForm] = useState(false);
   const [reportReason, setReportReason] = useState("");

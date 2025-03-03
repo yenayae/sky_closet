@@ -24,7 +24,7 @@ export const CosmeticCarouselItem = ({ item, width, cosmeticType }) => {
         onLoad={() => handleImageLoad()}
         style={{
           opacity: loading ? 0 : 1,
-          transition: "opacity 0.3s ease",
+          transition: "opacity 0.2s ease",
         }}
       />
     </div>

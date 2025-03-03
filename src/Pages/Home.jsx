@@ -1,7 +1,7 @@
 import NavBar from "../Components/NavBar";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -16,7 +16,10 @@ import "../Styles/styles.css";
 import "../Styles/page_css/home.css";
 
 const Home = () => {
-  const { user } = useAuth();
+  useEffect(() => {
+    document.title = "Sky Closet";
+  }, []);
+
   const imagePath = "img/assets/home/";
 
   const decorIcons = ["head", "hair", "mask", "necklace", "cape", "outfit"];

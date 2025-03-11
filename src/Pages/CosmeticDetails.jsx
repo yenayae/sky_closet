@@ -34,6 +34,16 @@ const CosmeticDetails = () => {
   const [cosmeticPosts, setCosmeticPosts] = useState([]);
   const [fetchingPosts, setFetchingPosts] = useState(true);
 
+  const [isDesktop, setIsDesktop] = useState(
+    window.matchMedia("(min-width: 800px)").matches
+  );
+
+  useEffect(() => {
+    window
+      .matchMedia("(min-width: 800px)")
+      .addEventListener("change", (e) => setIsDesktop(e.matches));
+  }, []);
+
   console.log(cosmeticInfo);
 
   //any user posts with cosmetic tag
@@ -87,12 +97,19 @@ const CosmeticDetails = () => {
           alignItems: "center",
         }}
       >
-        <div className="cosmetic-details">
-          <ImageCarousel
-            items={cosmeticImages}
-            cosmeticType={cosmeticType}
-            pageContext={"cosmeticDetails"}
-          />
+        <div
+          className="cosmetic-details"
+          style={{
+            flexDirection: isDesktop ? "row" : "column",
+          }}
+        >
+          <div className={`${isDesktop ? "" : "imagecarousel-mobile"}`}>
+            <ImageCarousel
+              items={cosmeticImages}
+              cosmeticType={cosmeticType}
+              pageContext={"cosmeticDetails"}
+            />
+          </div>
 
           <div className="cosmetic-details-container">
             <div className="cosmetic-details-header">

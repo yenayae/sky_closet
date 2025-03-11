@@ -20,7 +20,11 @@ const Column = styled.div`
   margin: 5px;
 `;
 
-export const DisplayPosts = ({ posts, loading = false }) => {
+export const DisplayPosts = ({
+  posts,
+  loading = false,
+  customMessage = "nothing to see here yet...",
+}) => {
   console.log("in display posts", posts);
 
   // Constants for resize function
@@ -80,7 +84,7 @@ export const DisplayPosts = ({ posts, loading = false }) => {
             src="/img/assets/lantern_pin.jpg"
             alt=""
           />
-          <span>nothing to see here yet...</span>
+          <span>{customMessage}</span>
         </div>
       ) : (
         columns.map((columnPosts, colIndex) => (

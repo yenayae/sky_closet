@@ -115,14 +115,18 @@ const CosmeticDetails = () => {
         </div>
       </div>
 
-      {cosmeticPosts.length > 0 && (
-        <div>
-          <StarDivider sectionName={"sky kids gallery"} />
-          <div className="relevant-posts">
-            <DisplayPosts posts={cosmeticPosts} loading={fetchingPosts} />
-          </div>
+      {/* {cosmeticPosts.length > 0 && ( */}
+      <div>
+        <StarDivider sectionName={"sky kids gallery"} />
+        <div className="relevant-posts">
+          <DisplayPosts
+            posts={cosmeticPosts}
+            loading={fetchingPosts}
+            customMessage={"no posts yet.. maybe add your own outfit?"}
+          />
         </div>
-      )}
+      </div>
+      {/* )} */}
     </div>
   );
 };

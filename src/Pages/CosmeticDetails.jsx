@@ -101,6 +101,7 @@ const CosmeticDetails = () => {
           className="cosmetic-details"
           style={{
             flexDirection: isDesktop ? "row" : "column",
+            width: isDesktop ? "80%" : "400px",
           }}
         >
           <div className={`${isDesktop ? "" : "imagecarousel-mobile"}`}>
